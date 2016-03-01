@@ -45,8 +45,8 @@ shinyServer(function(input, output) {
 
 topN <- function(x,y,n) {
     p <- ncol(x)
-    if (p < 10) {
-        stop("there are less than 10 predictors")
+    if (p < n) {
+        stop("there are less than N predictors")
     }
     
     pvalues <- numeric(p)
